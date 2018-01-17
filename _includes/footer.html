@@ -8,7 +8,11 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-            {% if site.author %} {{ site.author | escape }} {% else %} {{ site.title | escape }} {% endif %}
+            {% if site.author %} 
+              {{ site.author | escape }} 
+            {% else %} 
+              {{ site.title | escape }} 
+            {% endif %}
           </li>
           {% if site.email %}
           <li>
@@ -41,7 +45,7 @@
             </a>
           </li>
           <li class='social-rss'>
-            <a href="https://stackoverflow.com/users/7670316/abe">
+            <a href="{{ "/feed.xml" | relative_url }}">
               <i class="fa fa-rss fa-fx fa-2x" aria-hidden="true"></i>
             </a>
           </li>
