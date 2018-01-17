@@ -102,16 +102,7 @@ a {
     color: $text-color;
     text-decoration: underline;
   }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
-  }
 }
-
 
 /**
  * Blockquotes
@@ -205,11 +196,24 @@ pre {
 }
 
 .social-media-list {
-  .icon {
-    padding-right: 5px;
+  .social-github {
+    i {color:black}
   }
-
-  li + li {
-    padding-top: 5px;
+  .social-stack-overflow {
+    i {color: #ff6f00ee;} 
+  }
+  .social-twitter {
+    i {color:#6363ffe0;}
+  }
+  .social-rss {
+    i {color: orange;}
+  }
+  .social-mail {
+    i {color: #ff0000c8;}
+  }
+  
+  li {
+    padding: 10px;
+    display: table-cell;
   }
 }

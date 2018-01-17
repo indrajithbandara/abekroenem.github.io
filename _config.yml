@@ -7,8 +7,6 @@ resumee: >-
   comics and drawing, human father of a simpatic cat called Kernel and world explorer.
 baseurl: "" 
 url: "" 
-twitter_username: abekroenem
-github_username:  abekroenem
 
 markdown: kramdown
 plugins:
