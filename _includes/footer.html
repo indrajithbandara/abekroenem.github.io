@@ -1,27 +1,6 @@
 <footer class="site-footer">
-
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %} 
-              {{ site.author | escape }} 
-            {% else %} 
-              {{ site.title | escape }} 
-            {% endif %}
-          </li>
-          {% if site.email %}
-          <li>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
       <div class="footer-col footer-col-5">
         <ul class="social-media-list">
           <li class='social-github'>
@@ -29,14 +8,14 @@
               <i class="fa fa-github fa-fx fa-2x" aria-hidden="true"></i> 
             </a>
           </li>
-          <li class='social-twitter'>
-            <a href="http://twitter.com/abekroenem"> 
-              <i class="fa fa-twitter fa-fx fa-2x" aria-hidden="true"></i> 
-            </a>
-          </li>
           <li class='social-stack-overflow'>
             <a href="https://stackoverflow.com/users/7670316/abe">
               <i class="fa fa-stack-overflow fa-fx fa-2x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class='social-twitter'>
+            <a href="http://twitter.com/abekroenem"> 
+              <i class="fa fa-twitter fa-fx fa-2x" aria-hidden="true"></i> 
             </a>
           </li>
           <li class='social-mail'>
@@ -52,7 +31,5 @@
         </ul>
       </div>
     </div>
-
   </div>
-
 </footer>
