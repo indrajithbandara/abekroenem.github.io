@@ -1,20 +1,39 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
+  {% if jekyll.environment == "development" %} 
     {% include header.html %}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+  {% include footer.html %} 
+  
+  {% else %}
+  <div class="under-construction">
+    <div class="construction-bg">
+      <div class="construction-message">
+        <h1 class='construction-title'>
+          <button class='site-url'>{{ site.url | remove:'http://' }}</button> is under construction!</h1>
+        </hr>
+        <h3 class='construction-subtitle'>
+          <p>Good trained dolphins are committing new changes on my
+            <a href="http://github.com/abekroenem/abekroenem.github.io">github repo.</a>
+          </p>
+          <p>While then, you can contact me by using:</p>
+          <p>{% include social_media.html %}</p>
+          <p>So long and thanks for all the clicks!</p>
+        </h3>
       </div>
-    </main>
+    </div>
+    {% endif %}
 
-    {% include footer.html %}
-
-  </body>
+</body>
 
 </html>

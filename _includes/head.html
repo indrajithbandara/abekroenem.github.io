@@ -4,23 +4,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="cache-control" content="no-cache" />
 
-  <title>
-    {{ site.title | escape }} | 
-    {% if page.title %}
-      {{ page.title }}
-    {% else %}
-      Welcome
-    {% endif %}
-  </title>
+  <title> {{ site.title | escape }} {% if page.title %} | {{ page.title }} {% endif %} </title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}. Here, we'll talk and share knowledge about {% for c in site.categories %} {{ c | first }} , {% endfor %} 42 number and more.">
 
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
   
   {% if jekyll.environment == 'production' %}
-    {% include google-analytics.html %}
+    {% include google_analytics.html %}
   {% endif %}
 </head>
